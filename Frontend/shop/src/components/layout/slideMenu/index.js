@@ -191,9 +191,24 @@ export default function SlideMenu() {
             }}
           >
             <ListItemIcon>
-              <TwitterIcon sx={{ ml: 7 }} />
-              <GitHubIcon sx={{ ml: 3, mr: 3 }} />
-              <LinkedInIcon />
+              <TwitterIcon
+                sx={{ ml: 7, cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://twitter.com/HamidBarkand", "_blank")
+                }
+              />
+              <GitHubIcon
+                sx={{ ml: 3, mr: 3, cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://github.com/barkand", "_blank")
+                }
+              />
+              <LinkedInIcon
+                sx={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.open("https://www.linkedin.com/in/barkand", "_blank")
+                }
+              />
             </ListItemIcon>
           </Stack>
           <Stack direction="row" sx={{ ml: 8 }}>
