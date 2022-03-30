@@ -3,10 +3,8 @@
 
 A Online Shop
 
-
 ## How to run
 
- 
 ### Data:
 
 > Mariadb Database
@@ -32,21 +30,21 @@ A Online Shop
  2. Install `python3.7.8` in your system.
  
  3. Install python Environement in `.\Backend` path:
-   ```bash
+```bash
    python -m venv .venv
-   ```
+```
 
  4. Active python and install python packages:
-   ```bash
+```bash
    .\.venv\Scripts\activate
    pip install -r requirements.txt
-   ```
+```
    
  5. Go to `backend` folder and run python:
 ```bash
     cd .\Backend\
     .\.venv\Scripts\activate
-  ```
+```
 
  6. Run `Backend Server` using `python manage.py runserver`
 
@@ -59,20 +57,20 @@ A Online Shop
 
 
  1. Install python Environement in `.\Ml` path:
-   ```bash
+```bash
    python -m venv .ml
-   ```
+```
    
  2. Go to `api` folder and run python:
 ```bash
    cd .\ML\api\
    ..\.ml\Scripts\activat
-  ```
+```
   
  3. Install python packages:
-   ```bash
+```bash
    pip install -r requirements.txt
-   ```
+```
 
  4. Run `ML Server` using `flask run`
 
@@ -91,7 +89,7 @@ A Online Shop
  3. Go to `Shop` folder:
 ```bash
     cd .\Frontend\shop\
-  ``` 
+``` 
  5. Run `Frontend Server` using `npm run dev` 
   
  6. Go to [http://localhost:3000](http://localhost:3000) to see your NextShop version.
@@ -100,4 +98,4 @@ A Online Shop
 
 ## Demo:
 
-[shop.aionchain.co](https://)
+[shop.aionchain.co](https://shop.aionchain.co)
