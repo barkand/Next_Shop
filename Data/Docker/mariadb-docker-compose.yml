@@ -1,0 +1,22 @@
+version: "3"
+services:
+  mariadb:
+    image: mariadb:10.6.4
+    container_name: mariadb
+    ports:
+      - 3306:3306
+    restart: always
+    volumes:
+      - ./../Database/Mariadb/:/var/lib/mysql
+    environment:
+      MYSQL_DATABASE: "yourdomain_db"
+      MYSQL_ROOT_PASSWORD: "password"
+      MYSQL_USER: "yourdomain_sa"
+      MYSQL_PASSWORD: "password"
+      MYSQL_MAX_EXECUTION_TIME: "6000"
+
+    networks:
+      - network
+
+networks:
+  network:

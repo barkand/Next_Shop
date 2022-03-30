@@ -1,0 +1,9 @@
+**/.venv
+**/__pycache__
+**/.ipynb_checkpoints
+
+**/db.sqlite3
+**/*.zip
+**/secret_key.txt
+
+logs/**/*.log*

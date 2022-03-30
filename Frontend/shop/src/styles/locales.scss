@@ -1,0 +1,50 @@
+.en {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  align-self: flex-start;
+}
+
+.fa {
+  align-self: flex-start;
+  font-size: 0.857rem !important;
+
+  div,
+  span,
+  p,
+  a,
+  button,
+  label,
+  input,
+  textarea,
+  select,
+  option,
+  th,
+  td,
+  ul,
+  li,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  fieldset {
+    font-family: IranSans !important;
+  }
+}
+
+@font-face {
+  font: {
+    family: "IranSans";
+    style: normal;
+    weight: 100;
+  }
+  src: url("/assets/fonts/fa/IranSans.ttf");
+  src: local("IranSans"), local("Iran Sans"),
+    url("/assets/fonts/fa/IranSans.eot?")
+      url("/assets/fonts/fa/IranSans.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/fa/IranSans.woff") format("woff"),
+    url("/assets/fonts/fa/IranSans.ttf") format("truetype"),
+    url("/assets/fonts/fa/IranSans.svg#IranSans") format("svg");
+}

@@ -1,0 +1,48 @@
+.img-wrapper {
+  overflow: hidden;
+}
+
+img {
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+
+  &.form {
+    border-radius: 15px;
+  }
+
+  &.hover-zoom {
+    transition: transform 0.5s ease;
+  }
+
+  &.hover-zoom {
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+
+  &:before {
+    content: " ";
+    display: block;
+    position: absolute;
+    height: calc(100%);
+    width: 100%;
+    background-color: rgb(230, 230, 230);
+    border: 2px dotted rgb(200, 200, 200);
+    border-radius: 5px;
+  }
+
+  &:after {
+    content: "█" " image not found: " attr(alt);
+    display: block;
+    color: rgb(100, 100, 100);
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font: {
+      family: tahoma;
+      style: normal;
+      size: 16px;
+    }
+  }
+}

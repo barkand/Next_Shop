@@ -1,0 +1,22 @@
+{
+  "superLargeDesktop": {
+    "breakpoint": { "max": 4000, "min": 2000 },
+    "items": 5
+  },
+  "LargeDesktop": {
+    "breakpoint": { "max": 2000, "min": 1400 },
+    "items": 4
+  },
+  "desktop": {
+    "breakpoint": { "max": 1400, "min": 1024 },
+    "items": 3
+  },
+  "tablet": {
+    "breakpoint": { "max": 1024, "min": 630 },
+    "items": 2
+  },
+  "mobile": {
+    "breakpoint": { "max": 630, "min": 0 },
+    "items": 1
+  }
+}
