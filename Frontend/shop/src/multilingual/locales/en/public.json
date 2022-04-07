@@ -33,5 +33,6 @@
   "PasswordIsWrong": "Password is wrong",
   "logout...": "Logout...",
   "cart": "Cart",
-  "orders": "Orders"
+  "orders": "Orders",
+  "home": "Home"
 }

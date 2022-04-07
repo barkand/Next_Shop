@@ -11,6 +11,7 @@ import {
   Stack,
 } from "@mui/material";
 import {
+  Home as HomeIcon,
   Menu as MenuIcon,
   ChevronLeft as ChevronLeftIcon,
   Copyright as CopyrightIcon,
@@ -106,6 +107,13 @@ export default function SlideMenu() {
           </DrawerHeader>
           <Divider />
           <>
+            <CustomLink
+              link={"/"}
+              name={t("home")}
+              icon={<HomeIcon />}
+              onclick={closeDrawer}
+            />
+
             {user ? (
               <>
                 <CustomLink
