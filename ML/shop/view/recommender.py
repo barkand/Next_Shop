@@ -8,7 +8,7 @@ serialized_name = 'recommender'
 
 
 def UpdateRecommender():
-    ordersList = requests.get(f"{config('API_PATH')}/api/shop/v1/orders/all/").json()
+    ordersList = requests.get(f"{config('API_PATH')}shop/v1/orders/all/").json()
 
     serialized = SerializeApriori(ordersList)
     updateIfExist_Ml_Models(serialized_name, serialized)
