@@ -2,6 +2,12 @@
 
 A Online Shop
 
+## Demo:
+
+[shop.aionchain.co](https://shop.aionchain.co)
+
+---
+
 ```bash
 
                  ┌────────────────────┐
@@ -116,9 +122,3 @@ A Online Shop
 5.  Run `Frontend Server` using `npm run dev`
 
 6.  Go to [http://localhost:3000](http://localhost:3000) to see your NextShop version.
-
----
-
-## Demo:
-
-[shop.aionchain.co](https://shop.aionchain.co)
