@@ -1,4 +1,6 @@
 import axios from "axios";
+import jwt_decode from "jwt-decode";
+import dayjs from "dayjs";
 
 import { defaultGlobal } from "/src/context/global";
 import {
@@ -25,15 +27,29 @@ const api = () => {
     });
   }
 
-  axiosInstance.interceptors.request.use((config) => {
-    config.headers["User-Lang"] =
+  axiosInstance.interceptors.request.use(async (request) => {
+    request.headers["User-Lang"] =
       GetValueLocalStorage("lang") || defaultGlobal.culture.language;
 
-    if (token) {
-      config.headers["Authorization"] = `Bearer ${token}`;
+    const user = jwt_decode(token);
+    const isExpired = dayjs.unix(user.exp).diff(dayjs()) < 5000;
+
+    if (!isExpired) {
+      request.headers["Authorization"] = `Bearer ${token}`;
+
+      return request;
     }
 
-    return config;
+    const response = await axios.post(`users/v1/login/refresh/`, {
+      refresh: GetValueLocalStorage("refresh"),
+    });
+
+    token = response.data.access;
+    SetValueLocalStorage("token", token);
+
+    request.headers["Authorization"] = `Bearer ${token}`;
+
+    return request;
   });
 
   axiosInstance.interceptors.response.use(
@@ -63,7 +79,7 @@ export const GetRestApi = (path, query) => {
           error.response.data.messages &&
           error.response.data.messages[0].token_class === "AccessToken"
         ) {
-          api()
+          axios()
             .post(`users/v1/login/refresh/`, {
               refresh: GetValueLocalStorage("refresh"),
             })
