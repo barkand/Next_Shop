@@ -11,19 +11,14 @@ A Online Shop
 
 ```bash
 
-                 ┌────────────────────┐
-                 │     (Backend)      │
-                 │                    │              ┌──────────────────────┐
-┌──────────┐     │   Django Server    │              │      (Frontend)      │
-│  (Data)  ├─────►                    ├──────────────►                      │
-│          │     └────────────────────┘              │                      │
-│  MariaDB │                                         │     Next.js Server   │
-│  Docker  │     ┌────────────────────┐              │                      │
-│          ├─────►       (ML)         ├──────────────►                      │
-└──────────┘     │                    │              │                      │
-                 │    Flask Server    │              └──────────────────────┘
-                 │                    │
-                 └────────────────────┘
+                 ┌─────────────────┐
+┌──────────┐     │    (Backend)    │     ┌────────────┐
+│  (Data)  ├─────►  Django Server  ├─────►            │
+│          │     └─────────────────┘     │ (Frontend) │
+│  MariaDB │     ┌─────────────────┐     │   Next.js  │
+│  Docker  ├─────►      (ML)       ├─────►            │
+└──────────┘     │  Flask Server   │     └────────────┘
+                 └─────────────────┘
 
 ```
 
@@ -88,6 +83,8 @@ A Online Shop
 7.  Go to [http://localhost:8000](http://localhost:8000) to check backend Server.
 
 ### ML:
+
+- Recommender System
 
 > Pyhton Server (Flask)
 
